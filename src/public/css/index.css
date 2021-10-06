@@ -187,3 +187,27 @@ border-radius: 5px;
     
     
 }
+@media (max-width: 600px) {
+    .monsterHp{
+        border: unset;
+        border-radius: unset;
+        width: 100%;
+        transform: unset;
+        box-shadow: none;
+    }
+    
+    .health{
+        border-radius: unset;
+    }
+    
+    .monster{
+        width: calc(1vh + 1vw + 5em);
+        transform: translateY(-4.25em);
+    }
+    
+    .plataforma {
+        width: calc(1vh + 3vw + 15em);
+    }
+    
+    
+}
