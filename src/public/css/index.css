@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+@import url(./animation.css);
+@import url(./normalize.css);
+
+body {
+    background-image: url("/public/img/jpg/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    cursor: url("/public/img/png/cursor.png"), auto;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.hit-monster {
+    animation: hit-monster 0.1s;
+}
+
+.hit-platform {
+    animation: hit-platform 0.1s;
+}
+
+.monster {
+    width: calc(1vh + 1vw + 8em);
+    margin: auto;
+    position: absolute;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateY(-6.75em);
+}
+
+.plataforma {
+    margin: auto;
+    position: absolute;
+    width: calc(1vh + 3vw + 25em);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.monsterHp {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 50%;
+    background: #0005;
+    transform: translateY(1em);
+    box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
+border-radius: 5px;
+}
+
+.health {
+    border-radius: 5px;
+    transition: 0.5s;
+    background: linear-gradient(180deg, rgba(0, 231, 50, 1) 0%, rgba(0, 255, 58, 1) 50%, rgba(0, 191, 37, 1) 100%);
+    margin: 0;
+    padding: 0.1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.userInfo {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 3vh;
+    width: 100%;
+    margin: auto;
+    background: #ffbc51;
+}
+
+.userInfo p {
+    margin: .05em;
+    font-size: 1.25em;
+}
+
+.userInfo p:nth-child(2) {
+    display: none;
+}
+
+.nivel {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.expBarra {
+    height: 3vh;
+    width: 0%;
+    background: #ffd796;
+    transition: 0.5s;
+}
+
+
+
+.load{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url('/public/img/jpg/fondo3.jpg');
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.loading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 6em;
+    animation: loading 2s ease 0s infinite normal forwards;
+
+}
+.loadingText{
+    color: #000;
+    transform: translateY(1.5em);
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 3em;
+}
+
+@media (max-width: 600px) {
+    .monsterHp{
+        border: unset;
+        border-radius: unset;
+        width: 100%;
+        transform: unset;
+        box-shadow: none;
+    }
+    
+    .health{
+        border-radius: unset;
+    }
+    
+    .monster{
+        width: calc(1vh + 1vw + 5em);
+        transform: translateY(-4.25em);
+    }
+    
+    .plataforma {
+        width: calc(1vh + 3vw + 20em);
+    }
+    
+    
+}

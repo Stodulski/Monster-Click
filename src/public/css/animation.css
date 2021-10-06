@@ -1,0 +1,98 @@
+@keyframes hit-monster {
+    0% {
+        transform: translateY(-6.75em);
+    }
+    
+    20% {
+        transform: translate(2px, calc(-6.75em - -2px));
+    }
+    
+    40% {
+        transform: translate(2px, calc(-6.75em - 2px));
+    }
+    
+    60% {
+        transform: translate(-2px, calc(-6.75em - 2px));
+    }
+    
+    80% {
+        transform: translate(-2px, calc(-6.75em - -2px));
+    }
+    
+    100% {
+        transform: translateY(-6.75em);
+    }
+}
+
+@keyframes hit-platform {
+    33% {
+        
+        transform: translateY(.05em) translateX(-.05em);
+    }
+    
+    66% {
+        transform: translateY(-.05em) translateX(.05em);
+    }
+    
+    100% {
+        transform: unset;
+    }
+}
+
+@keyframes loading {
+    0% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+      transform-origin: center center;
+    }
+  
+    20% {
+      animation-timing-function: ease-in;
+      transform: scale(0.91);
+    }
+  
+    40% {
+      animation-timing-function: ease-out;
+      transform: scale(0.98);
+    }
+  
+    60% {
+      animation-timing-function: ease-in;
+      transform: scale(0.87);
+    }
+  
+    80% {
+      animation-timing-function: ease-out;
+      transform: scale(1);
+    }
+  }
+  
+
+@media (max-width: 600px) {
+    
+    @keyframes hit-monster {
+        0% {
+            transform: translateY(-4.25em);
+        }
+        
+        20% {
+            transform: translate(2px, calc(-4.25em - -2px));
+        }
+        
+        40% {
+            transform: translate(2px, calc(-4.25em - 2px));
+        }
+        
+        60% {
+            transform: translate(-2px, calc(-4.25em - 2px));
+        }
+        
+        80% {
+            transform: translate(-2px, calc(-4.25em - -2px));
+        }
+        
+        100% {
+            transform: translateY(-4.25em);
+        }
+    }
+}

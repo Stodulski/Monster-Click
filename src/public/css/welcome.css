@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+@import url(./normalize.css);
+@import url(./animation.css);
+
+body{
+    background-image: url("/public/img/jpg/fondo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.monsterClick{
+    font: bold 80px/1 'Gemunu Libre';
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  color: #ffc720;
+  text-shadow: 0  2px  0   #8b6e15,
+               0  4px  0   #7c6213,
+               0  6px  0   #6e5611, 
+               0  8px  0   #5f4b0e, 
+               0 10px  0   #503f0c,
+               0 12px  0   #41330a,
+              3px 8px 15px rgba(0,0,0,0.1),
+              3px 8px  5px rgba(0,0,0,0.3);
+}
+.header__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    transform: translateY(-3em);
+}
+
+.startButton{
+    background: rgb(255, 115, 0);
+    border-radius: 50%;
+    padding: 1em;
+    border: 3px solid rgb(255, 255, 255);
+    
+}
+.start__container{
+    background: rgb(255, 115, 0);
+    border-radius: 50%;
+    padding: 0.4em;
+    box-shadow: 0px 15px -0px -5px rgb(41, 41, 41);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+
+.load{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: url('/public/img/jpg/fondo3.jpg');
+    background-size: cover;
+
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.loading{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 6em;
+    animation: loading 2s ease 0s infinite normal forwards;
+
+}
+.loadingText{
+    color: #000;
+    transform: translateY(1.5em);
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 3em;
+}
+@media (max-width: 600px) {
+    .monsterClick{
+        font-size: 40px;
+        text-shadow: none;
+        color: #000;
+    }
+    .startButton{
+        padding: 0.5em;
+        width: 5em;
+    }
+    body{
+        background-image: url("/public/img/jpg/fondo4.jpg");
+    }
+    
+}
+@media (max-width: 290px) {
+    .monsterClick{
+        font-size: 30px;
+        text-shadow: none;
+        color: #000;
+        
+    }
+    .startButton{
+        padding: 0.5em;
+        width: 3em;
+    }
+    .start__container{
+        margin-top: 1em;
+    }
+    
+}
