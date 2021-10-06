@@ -177,12 +177,6 @@ function clickAudio(){
   sonido.play();
 }
 
-setTimeout(() => {
-  setTimeout(() => {
-      loading.remove()
-  }, 500); 
-  loading.style.opacity = '0'
-}, 4000);
 
 setInterval(() => {
   document.cookie = `level=` + myLevel;

@@ -15,6 +15,7 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     font-family: 'Gemunu Libre', sans-serif;
+    
 }
 
 .hit-monster {
@@ -125,43 +126,27 @@ border-radius: 5px;
 }
 
 .expBarra {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 3vh;
     width: 0%;
     background: #ffd796;
     transition: 0.5s;
 }
-
-
-
-.load{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    background: url('/public/img/jpg/fondo3.jpg');
+#nivelActual{
     z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 0.5s;
 }
-.loading{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    width: 6em;
-    animation: loading 2s ease 0s infinite normal forwards;
 
-}
-.loadingText{
-    color: #000;
-    transform: translateY(1.5em);
-    font-family: 'Gemunu Libre', sans-serif;
-    font-size: 3em;
-}
+
+
+
 
 @media (max-width: 600px) {
     .monsterHp{

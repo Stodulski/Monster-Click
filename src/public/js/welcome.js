@@ -22,11 +22,3 @@ startContainer.onmouseup = ()=>{
 }
 
 
-
-
-setTimeout(() => {
-    setTimeout(() => {
-        loading.remove()
-    }, 500); 
-    loading.style.opacity = '0'
-}, 4500);
