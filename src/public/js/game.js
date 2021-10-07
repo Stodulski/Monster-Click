@@ -22,27 +22,23 @@ let monsters = [{
 
 // inicializar
 let cookiesPersonal = document.cookie.split(";");
+
 if(cookiesPersonal.length == 1){
   document.cookie = `level=1`;
   document.cookie = `exp=0`;
   var expCookie = [0, 0]
   var levelCookie = [1, 1] 
 }
+
 for (let i = 0; i < cookiesPersonal.length; i++) {
   let element = cookiesPersonal[i].split('=');
   let elementType = element[0].trim();
   let elementValue = element;
   if(elementType == 'exp'){
       var expCookie = elementValue;
-    
-    
-    
   }
   if(elementType == 'level'){
-      var levelCookie = elementValue;
-
-    
-    
+      var levelCookie = elementValue;  
   }
 }
 
