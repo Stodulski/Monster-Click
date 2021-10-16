@@ -16,7 +16,7 @@ body {
     -webkit-user-select: none;
     -ms-user-select: none;
     font-family: 'Gemunu Libre', sans-serif;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .hit-monster {
