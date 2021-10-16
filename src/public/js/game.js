@@ -171,6 +171,6 @@ function clickAudio(){
 
 
 setInterval(() => {
-  document.cookie = `level=` + myLevel;
-  document.cookie = `exp=` + myExp;
+  document.cookie = `level=${myLevel}; expires=Fri, 31 Dec 9999 23:59:59 GMT` ;
+  document.cookie = `exp=${myExp}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 }, 100);

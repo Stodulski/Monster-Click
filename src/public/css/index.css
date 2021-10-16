@@ -7,7 +7,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     cursor: url("/public/img/png/cursor.png"), auto;
     -webkit-user-drag: none;
     user-select: none;
