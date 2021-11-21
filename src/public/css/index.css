@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap");
 @import url(./animation.css);
 @import url(./normalize.css);
 
@@ -15,7 +15,7 @@ body {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    font-family: 'Gemunu Libre', sans-serif;
+    font-family: "Gemunu Libre", sans-serif;
     overflow: hidden;
 }
 
@@ -72,16 +72,21 @@ body {
     width: 50%;
     background: #0005;
     transform: translateY(1em);
-    box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
--webkit-box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
--moz-box-shadow: -0px -0px 10px 1px rgba(0,0,0,0.75);
-border-radius: 5px;
+    box-shadow: -0px -0px 10px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -0px -0px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -0px -0px 10px 1px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
 }
 
 .health {
     border-radius: 5px;
     transition: 0.5s;
-    background: linear-gradient(180deg, rgba(0, 231, 50, 1) 0%, rgba(0, 255, 58, 1) 50%, rgba(0, 191, 37, 1) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 231, 50, 1) 0%,
+        rgba(0, 255, 58, 1) 50%,
+        rgba(0, 191, 37, 1) 100%
+    );
     margin: 0;
     padding: 0.1em;
     width: 100%;
@@ -93,7 +98,7 @@ border-radius: 5px;
 
 .userInfo {
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     align-items: center;
@@ -106,7 +111,7 @@ border-radius: 5px;
 }
 
 .userInfo p {
-    margin: .05em;
+    margin: 0.05em;
     font-size: 1.25em;
 }
 
@@ -115,7 +120,7 @@ border-radius: 5px;
 }
 
 .nivel {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -124,10 +129,11 @@ border-radius: 5px;
     justify-content: center;
     align-items: center;
     text-align: center;
+    z-index: 2;
 }
 
 .expBarra {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
@@ -141,59 +147,51 @@ border-radius: 5px;
     background: #ffd796;
     transition: 0.5s;
 }
-#nivelActual{
+#nivelActual {
     z-index: 2;
 }
 
-
-
-
-
 @media (max-width: 600px) {
-    .monsterHp{
+    .monsterHp {
         border: unset;
         border-radius: unset;
         width: 100%;
         transform: unset;
         box-shadow: none;
     }
-    
-    .health{
+
+    .health {
         border-radius: unset;
     }
-    
-    .monster{
+
+    .monster {
         width: calc(1vh + 1vw + 5em);
         transform: translateY(-4.25em);
     }
-    
+
     .plataforma {
         width: calc(1vh + 3vw + 20em);
     }
-    
-    
 }
 @media (max-width: 600px) {
-    .monsterHp{
+    .monsterHp {
         border: unset;
         border-radius: unset;
         width: 100%;
         transform: unset;
         box-shadow: none;
     }
-    
-    .health{
+
+    .health {
         border-radius: unset;
     }
-    
-    .monster{
+
+    .monster {
         width: calc(1vh + 1vw + 5em);
         transform: translateY(-4.25em);
     }
-    
+
     .plataforma {
         width: calc(1vh + 3vw + 15em);
     }
-    
-    
 }
