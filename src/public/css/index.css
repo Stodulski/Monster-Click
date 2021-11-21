@@ -1,21 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap");
-@import url(./animation.css);
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
 @import url(./normalize.css);
 
 body {
-    background-image: url("/public/img/jpg/fondo.jpg");
+    background-image: url('/public/img/jpg/fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     max-height: 100vh;
-    cursor: url("/public/img/png/cursor.png"), auto;
+    cursor: url('/public/img/png/cursor.png'), auto;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    font-family: "Gemunu Libre", sans-serif;
+    font-family: 'Gemunu Libre', sans-serif;
     overflow: hidden;
 }
 
@@ -193,5 +192,75 @@ body {
 
     .plataforma {
         width: calc(1vh + 3vw + 15em);
+    }
+}
+
+/* Animaciones */
+
+@keyframes hit-monster {
+    0% {
+        transform: translateY(-6.75em);
+    }
+
+    20% {
+        transform: translate(2px, calc(-6.75em - -2px));
+    }
+
+    40% {
+        transform: translate(2px, calc(-6.75em - 2px));
+    }
+
+    60% {
+        transform: translate(-2px, calc(-6.75em - 2px));
+    }
+
+    80% {
+        transform: translate(-2px, calc(-6.75em - -2px));
+    }
+
+    100% {
+        transform: translateY(-6.75em);
+    }
+}
+
+@keyframes hit-platform {
+    33% {
+        transform: translateY(0.05em) translateX(-0.05em);
+    }
+
+    66% {
+        transform: translateY(-0.05em) translateX(0.05em);
+    }
+
+    100% {
+        transform: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    @keyframes hit-monster {
+        0% {
+            transform: translateY(-4.25em);
+        }
+
+        20% {
+            transform: translate(2px, calc(-4.25em - -2px));
+        }
+
+        40% {
+            transform: translate(2px, calc(-4.25em - 2px));
+        }
+
+        60% {
+            transform: translate(-2px, calc(-4.25em - 2px));
+        }
+
+        80% {
+            transform: translate(-2px, calc(-4.25em - -2px));
+        }
+
+        100% {
+            transform: translateY(-4.25em);
+        }
     }
 }

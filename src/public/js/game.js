@@ -28,24 +28,20 @@ let monsters = [
 
 // inicializar
 let cookiesPersonal = document.cookie.split(';');
-
-if (cookiesPersonal.length == 1) {
+let length = cookiesPersonal.length;
+if (length === 1) {
     document.cookie = `level=1`;
     document.cookie = `exp=0`;
     var expCookie = [0, 0];
     var levelCookie = [1, 1];
 }
 
-for (let i = 0; i < cookiesPersonal.length; i++) {
+for (let i = 0; i < length; i++) {
     let element = cookiesPersonal[i].split('=');
     let elementType = element[0].trim();
     let elementValue = element;
-    if (elementType == 'exp') {
-        var expCookie = elementValue;
-    }
-    if (elementType == 'level') {
-        var levelCookie = elementValue;
-    }
+    if (elementType == 'exp') var expCookie = elementValue;
+    if (elementType == 'level') var levelCookie = elementValue;
 }
 
 let myLevel = parseInt(levelCookie[1]);
@@ -84,11 +80,11 @@ monsterSpawn.addEventListener('mousedown', () => {
     antiInspec();
     multiplicadorExp();
     if (actualMonsterHp <= 0) {
+        expSystem();
+        spawnMonster();
         // Guardado de exp y nivel
         document.cookie = `level=${myLevel}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
         document.cookie = `exp=${myExp}; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-        expSystem();
-        spawnMonster();
     }
 });
 
@@ -163,15 +159,9 @@ function animationClick() {
     }, 100);
 }
 function multiplicadorExp() {
-    if (myLevel <= 5) {
-        multiplicador = 5;
-    }
-    if (myLevel > 5 && myLevel <= 20) {
-        multiplicador = 4;
-    }
-    if (myLevel > 20) {
-        multiplicador = 3;
-    }
+    if (myLevel <= 5) multiplicador = 5;
+    if (myLevel > 5 && myLevel <= 20) multiplicador = 4;
+    if (myLevel > 20) multiplicador = 3;     
 }
 function monsterDamage() {
     actualMonsterHp = actualMonsterHp - 100 * (myLevel * 1.5);
