@@ -2,6 +2,10 @@
 
 Monster Click es un juego que se trata de clickear monstruos hasta matarlos.
 
+# URL
+
+https://monsterclick.herokuapp.com/
+
 ## ¿Como se juega?
 
 Es sencillo, solamente debes dar clicks en la zona que aparece el monstruo hasta que la barra de vida se reduzca completamente,
